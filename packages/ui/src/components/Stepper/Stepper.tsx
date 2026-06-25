@@ -51,7 +51,7 @@ export function Stepper({
                     'flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 text-label-sm font-semibold',
                     status === 'completed' && 'border-primary bg-primary text-primary-fg',
                     status === 'current' && 'border-primary text-primary',
-                    status === 'upcoming' && 'border-border text-text-subtle',
+                    status === 'upcoming' && 'border-border text-text-muted',
                   )}
                 >
                   {status === 'completed' ? (
@@ -73,7 +73,7 @@ export function Stepper({
                 <p
                   className={cn(
                     'text-label font-medium',
-                    status === 'upcoming' ? 'text-text-subtle' : 'text-text',
+                    status === 'upcoming' ? 'text-text-muted' : 'text-text',
                   )}
                 >
                   {step.label}

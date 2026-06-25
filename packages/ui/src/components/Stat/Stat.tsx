@@ -9,7 +9,7 @@ export function StatLabel({ className, ...props }: React.HTMLAttributes<HTMLSpan
   return (
     <span
       className={cn(
-        'text-overline font-semibold uppercase tracking-wide text-text-subtle',
+        'text-overline font-semibold uppercase tracking-wide text-text-muted',
         className,
       )}
       {...props}

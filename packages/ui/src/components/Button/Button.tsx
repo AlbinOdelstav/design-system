@@ -15,7 +15,7 @@ const button = cva(
     variants: {
       variant: {
         primary: 'bg-primary text-primary-fg hover:bg-primary-hover active:bg-primary-active',
-        secondary: 'bg-secondary text-text-inverse hover:bg-secondary-hover',
+        secondary: 'bg-secondary-subtle text-secondary-subtle-fg hover:bg-border-subtle',
         outline:
           'border border-border-strong bg-surface text-text hover:bg-bg-subtle',
         ghost: 'bg-transparent text-text hover:bg-bg-subtle',
