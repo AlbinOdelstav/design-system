@@ -1,0 +1,58 @@
+/* Generated CSS custom properties (:root token variables). Must precede other
+   statements per the CSS spec, so it comes before the @tailwind directives. */
+@import './styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-base);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Skip-to-content link: visually hidden until focused. */
+  .skip-link {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    z-index: 100;
+    transform: translateY(-200%);
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+    color: var(--color-primary-fg);
+    padding: 0.5rem 1rem;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced-motion globally: kill animations and transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

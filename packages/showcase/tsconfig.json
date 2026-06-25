@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@albin/ui": ["../ui/src/index.ts"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "../ui" }]
+}

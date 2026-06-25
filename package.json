@@ -1,0 +1,36 @@
+{
+  "name": "design-system",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @albin/showcase",
+    "build": "npm run build -w @albin/ui",
+    "build:showcase": "npm run build -w @albin/showcase",
+    "build:tokens": "npm run build:tokens -w @albin/ui",
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "verify:dist": "node tools/check-dist.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.9.0",
+    "@testing-library/jest-dom": "6.4.8",
+    "@testing-library/react": "16.0.0",
+    "@testing-library/user-event": "14.5.2",
+    "@types/node": "20.14.15",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "eslint": "9.9.0",
+    "eslint-plugin-jsx-a11y": "6.10.0",
+    "eslint-plugin-react-hooks": "5.0.0",
+    "jsdom": "24.1.1",
+    "typescript": "5.5.4",
+    "typescript-eslint": "8.1.0",
+    "vitest": "2.0.5"
+  }
+}

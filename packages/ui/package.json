@@ -1,0 +1,49 @@
+{
+  "name": "@albin/ui",
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./tailwind-preset": {
+      "types": "./dist/tailwind-preset.d.ts",
+      "import": "./dist/tailwind-preset.js",
+      "require": "./dist/tailwind-preset.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./base.css": "./dist/base.css"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "prepare": "node scripts/build-tokens.mjs",
+    "typecheck": "tsc -b"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.0",
+    "clsx": "2.1.1",
+    "lucide-react": "0.427.0",
+    "tailwind-merge": "2.5.2",
+    "tailwindcss-animate": "1.0.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.10",
+    "tsup": "8.2.4"
+  }
+}
